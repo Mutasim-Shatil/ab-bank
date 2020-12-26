@@ -27,3 +27,21 @@ function updateSpanText(id, depositNumber) {
   const totalBalance = depositNumber + totalBalanceNumber;
   document.getElementById(id).innerText = totalBalance;
 }
+
+//withdraw section
+const withdraw = document.getElementById("withdraw");
+withdraw.addEventListener("click", function () {
+  const withdrawAmount = document.getElementById("withdraw-amount").value;
+  const withdrawAmountNum = parseFloat(withdrawAmount);
+  const totalWithdraw = document.getElementById("total-withdraw").innerText;
+  const totalWithdrawNum = parseFloat(totalWithdraw);
+  const finalWithdraw = withdrawAmountNum + totalWithdrawNum;
+  document.getElementById("total-withdraw").innerText = finalWithdraw;
+
+  const totalBalance = document.getElementById("total-balance").innerText;
+  const totalBalanceNum = parseFloat(totalBalance);
+  const totalBalanceAmount = totalBalanceNum - withdrawAmountNum;
+  document.getElementById("total-balance").innerText = totalBalanceAmount;
+
+  document.getElementById("withdraw-amount").value = "";
+});
