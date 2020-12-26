@@ -38,7 +38,7 @@
         <div class="col-md-4">
           <div class="deposit status">
             <h5>Deposit</h5>
-            <h2>$00</h2>
+            <h2>$ <span id="current-deposit">00</span> </h2>
           </div>
         </div>
         <div class="col-md-4">
@@ -50,7 +50,7 @@
         <div class="col-md-4">
           <div class="balance status">
             <h5>Balance</h5>
-            <h2>$2000</h2>
+            <h2>$ <span id="total-balance">2000</span></h2>
           </div>
         </div>
       </div>
@@ -58,13 +58,13 @@
         <div class="col-md-6">
           <div class="submit-area">
             <h4>Deposit</h4>
-            <input
+            <input id="deposit-amount"
               type="text"
               class="form-control"
               placeholder="$ amount want to deposit"
             />
             <br />
-            <button class="btn btn-success">Deposit</button>
+            <button id="add-deposit" class="btn btn-success">Deposit</button>
           </div>
         </div>
         <div class="col-md-6">
@@ -76,7 +76,7 @@
               placeholder="$ amount want to withdraw"
             />
             <br />
-            <button class="btn btn-success">Withdraw</button>
+            <button id="withdraw"class="btn btn-success">Withdraw</button>
           </div>
         </div>
       </div>
